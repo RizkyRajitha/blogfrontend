@@ -28,7 +28,8 @@ jobs:
       - name: run npm build # go to temp folder and run npm build to create files.
         run: |
           cd temp
-          npm build
+          yarn install 
+          yarn build
       - name: move files # move the dist files into root dir and remove others.
         run: |
           mv temp/public/* ./
