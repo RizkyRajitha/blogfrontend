@@ -5,7 +5,6 @@ const axios = require("axios")
 const filePrefix = "./content/blog/"
 
 const blogNumber = 6
-
 axios
   .get("https://blogrizky.herokuapp.com/api/getposts")
   .then(blogData => {
