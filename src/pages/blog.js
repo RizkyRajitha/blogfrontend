@@ -11,7 +11,7 @@ const API = "https://blogrizky.herokuapp.com"
 
 export default function Blog(props) {
   const [onceoffline, setonceoffline] = useState(false)
-  const [isloading, setisloading] = useState(true)
+  // const [isloading, setisloading] = useState(true)
   const [timediff, settimediff] = useState(0)
   const [timeoutsync, settimeoutsync] = useState(true)
   const [blogviews, setblogviews] = useState("")
@@ -21,7 +21,7 @@ export default function Blog(props) {
 
   useEffect(() => {
     // callMyPromise()
-    setisloading(false)
+    // setisloading(false)
     fetch("https://worldtimeapi.org/api/ip")
       .then(res => res.json())
       .then(result => {
@@ -43,20 +43,20 @@ export default function Blog(props) {
       setblogviews(222)
     }, 5000)
 
-    // Axios.get(`${API}/api/blog`, {
-    //   location: window.location.href,
-    // })
-    //   .then(result => {
-    //     if (result.data.err === false) {
-    //       // console.log("\n\n\n\n");
-    //       // console.log(result.data);
+    Axios.get(`${API}/api/blog`, {
+      location: window.location.href,
+    })
+      .then(result => {
+        if (result.data.err === false) {
+          // console.log("\n\n\n\n");
+          // console.log(result.data);
 
-    //       setblogviews(result.data.blogviews)
-    //     }
-    //   })
-    //   .catch(err => {
-    //     // console.log(err);
-    //   })
+          setblogviews(result.data.blogviews)
+        }
+      })
+      .catch(err => {
+        // console.log(err);
+      })
   }, [])
 
   return (
@@ -82,7 +82,7 @@ export default function Blog(props) {
         description={props.data.site.siteMetadata.description}
       />
       <div className="timesync" hidden={timeoutsync}>
-        <a href="https://time.is" target="_blank">
+        <a href="https://time.is" rel="noopener noreferrer" target="_blank">
           your time appears to be {Math.floor(timediff)} minutes off . Is your
           clock out of sync?
         </a>

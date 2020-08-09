@@ -25,6 +25,7 @@ class Footer extends Component {
             <a
               target="_blank"
               alt="github logo"
+              rel="noopener noreferrer"
               className="landingpagefooterdivitemlink"
               href="https://github.com/RizkyRajitha"
             >
@@ -37,9 +38,10 @@ class Footer extends Component {
           </div>
           <div className="landingpagefooterdivitem">
             <a
+             rel="noopener noreferrer"
               target="_blank"
               className="landingpagefooterdivitemlink"
-              href="https://twitter.com/RiZkY_Rajitha"
+              href="https://twitter.com/RizkyRajitha"
             >
               <span className="icon-twitter iconsfooter"></span>
               {/* <i className="fab fa-twitter fa-3x"></i> */}
@@ -47,6 +49,7 @@ class Footer extends Component {
           </div>
           <div className="landingpagefooterdivitem">
             <a
+             rel="noopener noreferrer"
               target="_blank"
               className="landingpagefooterdivitemlink"
               href="https://dev.to/rizkyrajitha"
@@ -58,6 +61,7 @@ class Footer extends Component {
           </div>
           <div className="landingpagefooterdivitem">
             <a
+             rel="noopener noreferrer"
               target="_blank"
               className="landingpagefooterdivitemlink"
               href="https://open.spotify.com/user/q5rqmuxjvzfbuqhzhp79ybgp9"
@@ -69,6 +73,7 @@ class Footer extends Component {
           </div>
           <div className="landingpagefooterdivitem">
             <a
+             rel="noopener noreferrer"
               target="_blank"
               className="landingpagefooterdivitemlink"
               href="https://ricosroom.blogspot.com/"

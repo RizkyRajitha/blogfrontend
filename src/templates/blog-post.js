@@ -26,11 +26,11 @@ export default function Blogpost({ data }) {
   useEffect(() => {
     let id = data.markdownRemark.frontmatter.id
 
-    // Axios.get(`${API}/api/getpost/${id}`)
-    //   .then(result2 => {
-    //     setpostdata(result2.data)
-    //   })
-    //   .catch(err => console.log(err))
+    Axios.get(`${API}/api/getpost/${id}`)
+      .then(result2 => {
+        setpostdata(result2.data)
+      })
+      .catch(err => console.log(err))
 
     Axios.get(`${API}/api/getcomments/${id}`)
       .then(result3 => {
